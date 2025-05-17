@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>پرسشنامه پژوهشی</title>
+</head>
+<body style="font-family: Tahoma; direction: rtl; padding: 30px; line-height: 1.8;">
+    <h2>👋 خوش آمدید!</h2>
+    <p>
+        من دانشجوی دانشگاه صنعتی شریف هستم و این پرسشنامه بخشی از یک پروژه پژوهشی است.  
+        لطفاً با پاسخ دادن به پرسشنامه زیر من را در این تحقیق یاری کنید.  
+        پاسخ‌های شما به صورت کاملاً محرمانه و ناشناس ثبت می‌شوند و صرفاً برای تحلیل آماری استفاده خواهند شد.
+    </p>
+    <p><strong>لطفاً روی لینک زیر کلیک کنید و پرسشنامه را تکمیل نمایید:</strong></p>
+
+    <script>
+        var linkGroup1 = "https://survey.porsline.ir/s/ZHrG1Kr7";
+        var linkGroup2 = "https://survey.porsline.ir/s/hA9A9a7M";
+
+        function assignLink() {
+            var links = [linkGroup1, linkGroup2];
+            var randomIndex = Math.floor(Math.random() * links.length);
+            return links[randomIndex];
+        }
+
+        var assignedLink = assignLink();
+        document.write("<p><a href='" + assignedLink + "' target='_blank' style='font-size:18px; color:blue;'>" + assignedLink + "</a></p>");
+    </script>
+</body>
+</html>
