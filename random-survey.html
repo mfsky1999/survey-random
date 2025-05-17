@@ -1,30 +1,69 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <title>پرسشنامه پژوهشی</title>
+  <meta charset="UTF-8">
+  <title>پرسشنامه تحقیقاتی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      direction: rtl;
+      text-align: center;
+      background: linear-gradient(to right, #f9f9f9, #e6f0ff);
+      color: #333;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    h1 {
+      color: #0066cc;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
-<body style="font-family: Tahoma; direction: rtl; padding: 30px; line-height: 1.8;">
-    <h2>👋 خوش آمدید!</h2>
+<body>
+  <div class="container">
+    <h1>به پرسشنامه تحقیقاتی ما خوش آمدید!</h1>
     <p>
-        من دانشجوی دانشگاه صنعتی شریف هستم و این پرسشنامه بخشی از یک پروژه پژوهشی است.  
-        لطفاً با پاسخ دادن به پرسشنامه زیر من را در این تحقیق یاری کنید.  
-        پاسخ‌های شما به صورت کاملاً محرمانه و ناشناس ثبت می‌شوند و صرفاً برای تحلیل آماری استفاده خواهند شد.
+      این پرسشنامه بخشی از یک پروژه تحقیقاتی در دانشگاه صنعتی شریف است. پاسخ‌های شما کاملاً محرمانه باقی می‌ماند و صرفاً جهت تحلیل علمی استفاده خواهد شد.
     </p>
-    <p><strong>لطفاً روی لینک زیر کلیک کنید و پرسشنامه را تکمیل نمایید:</strong></p>
-
     <script>
-        var linkGroup1 = "https://survey.porsline.ir/s/ZHrG1Kr7";
-        var linkGroup2 = "https://survey.porsline.ir/s/hA9A9a7M";
+      var linkExperiment = "https://survey.porsline.ir/s/ZHrG1Kr7";
+      var linkControl = "https://survey.porsline.ir/s/hA9A9a7M";
 
-        function assignLink() {
-            var links = [linkGroup1, linkGroup2];
-            var randomIndex = Math.floor(Math.random() * links.length);
-            return links[randomIndex];
-        }
+      function assignLink() {
+        var links = [linkExperiment, linkControl];
+        var randomIndex = Math.floor(Math.random() * links.length);
+        return links[randomIndex];
+      }
 
-        var assignedLink = assignLink();
-        document.write("<p><a href='" + assignedLink + "' target='_blank' style='font-size:18px; color:blue;'>" + assignedLink + "</a></p>");
+      var link = assignLink();
+      document.write("<a class='button' href='" + link + "' target='_blank'>شروع پرسشنامه</a>");
     </script>
+  </div>
 </body>
 </html>
